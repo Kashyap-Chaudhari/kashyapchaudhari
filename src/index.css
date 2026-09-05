@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-paper-bg: #fbf9f4;
+  --color-paper-darker: #f2eee3;
+  --color-paper-text: #231e17;
+  --color-paper-muted: #6b6357;
+  --color-paper-line: rgba(35, 30, 23, 0.08);
+  --color-accent-teal: #0d9488;
+  --color-accent-maroon: #991b1b;
+  --color-accent-gold: #d97706;
+}
+
+[data-theme="kraft"] {
+  --color-paper-bg: #dcc8a4;
+  --color-paper-darker: #cbb48c;
+  --color-paper-text: #24190c;
+  --color-paper-muted: #5a4933;
+  --color-paper-line: rgba(36, 25, 12, 0.12);
+}
+
+[data-theme="blueprint"] {
+  --color-paper-bg: #1e3a5f;
+  --color-paper-darker: #162c49;
+  --color-paper-text: #e0f2fe;
+  --color-paper-muted: #93c5fd;
+  --color-paper-line: rgba(224, 242, 254, 0.15);
+}
+
+[data-theme="charcoal"] {
+  --color-paper-bg: #1f2227;
+  --color-paper-darker: #17191d;
+  --color-paper-text: #f3f4f6;
+  --color-paper-muted: #9ca3af;
+  --color-paper-line: rgba(255, 255, 255, 0.1);
+}
+
+/* Desk Surface: Deep Midnight Studio Canvas with Multi-Point Aurora Ambient Lighting */
+.bg-denim-texture {
+  background-color: #080d1a;
+  background-image: 
+    radial-gradient(ellipse at 50% 45%, rgba(30, 58, 105, 0.45) 0%, transparent 70%),
+    radial-gradient(circle at 15% 15%, rgba(20, 184, 166, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(217, 119, 6, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 80% 85%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 20% 85%, rgba(14, 165, 233, 0.12) 0%, transparent 45%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 6px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.4) 0px, rgba(0, 0, 0, 0.4) 1px, transparent 1px, transparent 6px),
+    linear-gradient(to bottom, #0d1527, #050811);
+}
+
+/* Precision Studio Grid Overlay */
+.bg-studio-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Ambient Aurora Breathing Glow Animation */
+@keyframes auroraBreath {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1) translate(0px, 0px);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08) translate(10px, -8px);
+  }
+}
+
+.animate-aurora-1 {
+  animation: auroraBreath 12s ease-in-out infinite;
+}
+
+.animate-aurora-2 {
+  animation: auroraBreath 16s ease-in-out infinite reverse;
+}
+
+/* Architectural Cutting Mat Corner (Emerald/Slate Precision Grid) */
+.bg-cutting-mat {
+  background-color: #0b1f20;
+  background-image: 
+    linear-gradient(rgba(45, 212, 191, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 212, 191, 0.25) 1px, transparent 1px),
+    linear-gradient(rgba(45, 212, 191, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 212, 191, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+/* Blueprint Grid Corner (Deep Sapphire Drafting Canvas) */
+.bg-blueprint-mat {
+  background-color: #0a182e;
+  background-image: 
+    radial-gradient(circle, rgba(56, 189, 248, 0.35) 1px, transparent 1px),
+    linear-gradient(rgba(56, 189, 248, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.18) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 24px 24px;
+}
+
+
+/* Washi Tape Effect */
+.washi-tape {
+  background: rgba(245, 235, 195, 0.75);
+  backdrop-filter: blur(1px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), inset 0 0 4px rgba(255,255,255,0.4);
+  border-left: 2px dashed rgba(180, 160, 110, 0.4);
+  border-right: 2px dashed rgba(180, 160, 110, 0.4);
+}
+
+.washi-tape-teal {
+  background: rgba(45, 212, 191, 0.55);
+  backdrop-filter: blur(1px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  border-left: 2px dashed rgba(13, 148, 136, 0.4);
+  border-right: 2px dashed rgba(13, 148, 136, 0.4);
+}
+
+.washi-tape-pink {
+  background: rgba(244, 114, 182, 0.55);
+  backdrop-filter: blur(1px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  border-left: 2px dashed rgba(219, 39, 119, 0.4);
+  border-right: 2px dashed rgba(219, 39, 119, 0.4);
+}
+
+/* Realistic Paper Deckle Torn Edge */
+.torn-paper-edge {
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.45)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+  clip-path: polygon(
+    0% 0.5%, 2% 0.2%, 5% 0.8%, 9% 0.1%, 14% 0.7%, 18% 0.2%, 23% 0.9%, 28% 0.3%, 33% 0.8%, 38% 0.1%, 43% 0.6%, 49% 0.2%, 54% 0.8%, 59% 0.1%, 64% 0.7%, 70% 0.3%, 75% 0.9%, 81% 0.2%, 86% 0.8%, 91% 0.1%, 96% 0.6%, 99.5% 0.2%,
+    99.8% 3%, 99.2% 8%, 99.9% 14%, 99.3% 19%, 99.7% 25%, 99.1% 31%, 99.8% 37%, 99.3% 44%, 99.9% 51%, 99.2% 57%, 99.8% 64%, 99.3% 71%, 99.9% 78%, 99.2% 84%, 99.7% 91%, 99.3% 96%, 99.6% 99.5%,
+    97% 99.8%, 92% 99.3%, 87% 99.9%, 82% 99.2%, 76% 99.7%, 70% 99.3%, 65% 99.8%, 59% 99.2%, 53% 99.7%, 47% 99.1%, 41% 99.8%, 35% 99.2%, 29% 99.7%, 24% 99.3%, 18% 99.9%, 12% 99.2%, 7% 99.8%, 2% 99.3%, 0.3% 99.7%,
+    0.2% 96%, 0.8% 90%, 0.1% 84%, 0.7% 78%, 0.2% 72%, 0.9% 65%, 0.3% 59%, 0.8% 52%, 0.1% 45%, 0.7% 38%, 0.2% 31%, 0.8% 24%, 0.1% 17%, 0.7% 11%, 0.2% 5%, 0.4% 1%
+  );
+}
+
+/* Mini torn index card clip path */
+.torn-card-edge-1 {
+  clip-path: polygon(
+    0% 1%, 5% 0%, 12% 1.5%, 20% 0.2%, 30% 1%, 42% 0%, 55% 1.2%, 68% 0.2%, 80% 1.5%, 92% 0%, 100% 1%,
+    99.5% 15%, 100% 30%, 99.2% 48%, 100% 65%, 99.3% 82%, 100% 98%,
+    90% 99.5%, 78% 99%, 65% 100%, 50% 99.2%, 35% 100%, 20% 99.1%, 8% 99.8%, 0% 99%,
+    0.5% 85%, 0% 68%, 0.8% 50%, 0.2% 32%, 0.6% 15%
+  );
+}
+
+.torn-card-edge-2 {
+  clip-path: polygon(
+    1% 0.5%, 10% 1.2%, 22% 0%, 35% 1%, 48% 0.2%, 62% 1.5%, 75% 0.1%, 88% 1.2%, 99% 0%,
+    99.8% 12%, 99.2% 28%, 100% 45%, 99.1% 62%, 99.8% 79%, 99.2% 99%,
+    88% 99.2%, 75% 100%, 60% 99.1%, 45% 99.8%, 30% 99%, 15% 99.7%, 1% 99.2%,
+    0.2% 82%, 0.9% 65%, 0.1% 48%, 0.8% 30%, 0.2% 12%
+  );
+}
+
+.torn-card-edge-3 {
+  clip-path: polygon(
+    0% 0%, 15% 1.2%, 28% 0.2%, 45% 1.4%, 60% 0%, 75% 1.1%, 90% 0.3%, 100% 0.8%,
+    99.2% 18%, 100% 35%, 99.4% 55%, 100% 75%, 99.1% 92%, 100% 100%,
+    85% 99.4%, 70% 100%, 55% 99.2%, 38% 99.8%, 22% 99.1%, 10% 100%, 0% 99.5%,
+    0.8% 80%, 0.2% 60%, 0.9% 42%, 0.1% 25%, 0.7% 8%
+  );
+}
+
+/* Paper Crease Line Overlays */
+.paper-crease-overlay {
+  background-image: 
+    linear-gradient(to right, transparent calc(33.3% - 2px), rgba(0,0,0,0.04) 33.3%, rgba(255,255,255,0.4) calc(33.3% + 1px), transparent calc(33.3% + 3px)),
+    linear-gradient(to right, transparent calc(66.6% - 2px), rgba(0,0,0,0.04) 66.6%, rgba(255,255,255,0.4) calc(66.6% + 1px), transparent calc(66.6% + 3px)),
+    linear-gradient(to bottom, transparent calc(50% - 2px), rgba(0,0,0,0.04) 50%, rgba(255,255,255,0.35) calc(50% + 1px), transparent calc(50% + 3px)),
+    radial-gradient(ellipse at 50% 50%, transparent 80%, rgba(0,0,0,0.02) 100%);
+  pointer-events: none;
+}
+
+/* Dotted grid paper background */
+.bg-grid-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, var(--color-paper-line) 1.5px, transparent 1.5px);
+}
+
+/* Lined notebook rule background */
+.bg-lined-paper {
+  background-image: repeating-linear-gradient(transparent, transparent 31px, var(--color-paper-line) 31px, var(--color-paper-line) 32px);
+}
+
+/* Starburst sticker shape */
+.starburst-badge {
+  clip-path: polygon(
+    50% 0%, 63% 15%, 82% 10%, 85% 29%, 100% 38%, 92% 56%, 98% 75%, 80% 83%, 73% 100%, 54% 93%,
+    36% 99%, 28% 82%, 10% 77%, 15% 58%, 3% 40%, 18% 30%, 18% 11%, 38% 15%
+  );
+}
+
+/* Coffee ring stain effect */
+.coffee-stain {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid rgba(139, 90, 43, 0.12);
+  box-shadow: 
+    inset 0 0 12px rgba(139, 90, 43, 0.08),
+    0 0 6px rgba(139, 90, 43, 0.06);
+  filter: blur(0.5px);
+  pointer-events: none;
+}
+.coffee-stain::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  border: 2px solid rgba(139, 90, 43, 0.07);
+}
+
+/* Grain overlay via SVG data URI */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Handwritten highlight mark */
+.highlight-yellow {
+  background: linear-gradient(120deg, rgba(254, 240, 138, 0.6) 0%, rgba(253, 224, 71, 0.7) 100%);
+  border-radius: 4px 12px 6px 14px;
+  padding: 0 4px;
+}
+
+.highlight-cyan {
+  background: linear-gradient(120deg, rgba(165, 243, 252, 0.6) 0%, rgba(103, 232, 249, 0.7) 100%);
+  border-radius: 8px 4px 14px 6px;
+  padding: 0 4px;
+}
+
+/* Stamp Effect */
+.tactile-stamp {
+  border: 2px dashed currentColor;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  mask-image: linear-gradient(rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 100%);
+}
+
+/* Custom Scrollbar for tactile feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Inner Paper Sheet Scrollbar */
+.paper-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(35, 30, 23, 0.25) transparent;
+}
+.paper-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.paper-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.paper-scroll::-webkit-scrollbar-thumb {
+  background: rgba(35, 30, 23, 0.22);
+  border-radius: 9999px;
+}
+.paper-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(35, 30, 23, 0.4);
+}
+
