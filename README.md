@@ -130,15 +130,6 @@ portpholio/
 
 ---
 
-## 📬 Connect with Me
-
-- **Developer**: Kashyap Chaudhari
-- **Email**: [kashyap3037@gmail.com](mailto:kashyap3037@gmail.com)
-- **GitHub**: [@Kashyap-Chaudhari](https://github.com/Kashyap-Chaudhari)
-- **Instagram**: [@_._kashyap_3037](https://www.instagram.com/_._kashyap_3037)
-
----
-
 ## 📄 License
 
 This project is open-source and available under the [MIT License](LICENSE).
