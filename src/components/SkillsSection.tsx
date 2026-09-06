@@ -62,14 +62,14 @@ export const SkillsSection: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="relative py-8 sm:py-12 px-4 sm:px-8 border-b border-black/5 bg-black/[0.01]">
+    <section id="skills" className="relative py-8 sm:py-12 px-4 sm:px-8 border-b border-[var(--color-paper-line)]">
       <div className="max-w-5xl mx-auto">
         {/* Eyebrow */}
         <div className="flex items-center gap-2 mb-2">
-          <span className="font-mono text-xs tracking-widest uppercase font-semibold text-teal-800 bg-teal-100/70 px-2.5 py-0.5 rounded border border-teal-900/15">
+          <span className="font-mono text-xs tracking-widest uppercase font-semibold text-[var(--color-badge-text)] bg-[var(--color-badge-bg)] px-2.5 py-0.5 rounded border border-[var(--color-badge-border)]">
             STATUS: LEARNING & EXPLORATION
           </span>
-          <span className="h-px w-12 bg-teal-900/15" />
+          <span className="h-px w-12 bg-[var(--color-badge-border)]" />
         </div>
 
         {/* Header Row with Sticky Note Callout */}
@@ -87,8 +87,8 @@ export const SkillsSection: React.FC = () => {
             {/* "Independent Developer" Callout Styled as a Torn Sticky Note */}
             <div className="relative rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
               <div className="washi-tape-pink absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-5 rotate-2 z-10" />
-              <div className="bg-amber-100 text-amber-950 p-3 sm:px-4 sm:py-2.5 rounded-sm shadow-sticky border border-amber-300/80 font-hand text-lg font-bold flex items-center gap-2 select-none">
-                <Sparkles className="w-4 h-4 text-amber-700" />
+              <div className="bg-[var(--color-sticky-bg)] text-[var(--color-sticky-text)] p-3 sm:px-4 sm:py-2.5 rounded-sm shadow-sticky border border-[var(--color-card-border)] font-hand text-lg font-bold flex items-center gap-2 select-none">
+                <Sparkles className="w-4 h-4 text-[var(--color-accent)]" />
                 <span>Independent Developer ✍️</span>
               </div>
             </div>
@@ -99,7 +99,7 @@ export const SkillsSection: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => paperAudio.playClick()}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-black/15 bg-[var(--color-paper-text)] text-white hover:opacity-90 font-mono text-xs font-semibold shadow-sm transition-transform active:scale-95"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-[var(--color-card-border)] bg-[var(--color-btn-primary-bg)] text-[var(--color-btn-primary-text)] hover:opacity-90 font-mono text-xs font-semibold shadow-sm transition-transform active:scale-95"
             >
               <GithubIcon className="w-4 h-4" />
               <span>View GitHub</span>
@@ -115,14 +115,14 @@ export const SkillsSection: React.FC = () => {
             return (
               <div
                 key={item.num}
-                className="group relative p-6 rounded-2xl bg-black/[0.02] border border-black/10 hover:border-black/20 hover:bg-white/60 transition-all duration-200 shadow-sm"
+                className="group relative p-6 rounded-2xl bg-[var(--color-card-bg)] border border-[var(--color-card-border)] hover:border-[var(--color-accent)]/50 transition-all duration-200 shadow-sm"
               >
                 {/* Number & Icon */}
                 <div className="flex items-center justify-between mb-3">
-                  <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-black/5 text-[var(--color-paper-muted)]">
+                  <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-[var(--color-tag-bg)] text-[var(--color-paper-muted)] border border-[var(--color-tag-border)]">
                     {item.num}
                   </span>
-                  <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center text-[var(--color-paper-text)] group-hover:scale-110 transition-transform">
+                  <div className="w-8 h-8 rounded-lg bg-[var(--color-tag-bg)] flex items-center justify-center text-[var(--color-accent)] group-hover:scale-110 transition-transform">
                     <Icon className="w-4 h-4" />
                   </div>
                 </div>
@@ -138,11 +138,11 @@ export const SkillsSection: React.FC = () => {
                 </p>
 
                 {/* Tech Pills */}
-                <div className="flex flex-wrap gap-1.5 pt-2 border-t border-black/5">
+                <div className="flex flex-wrap gap-1.5 pt-2 border-t border-[var(--color-card-border)]">
                   {item.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="font-mono text-[11px] px-2 py-0.5 rounded-md bg-black/[0.04] text-[var(--color-paper-text)] font-medium"
+                      className="font-mono text-[11px] px-2 py-0.5 rounded-md bg-[var(--color-tag-bg)] text-[var(--color-tag-text)] border border-[var(--color-tag-border)] font-medium"
                     >
                       {skill}
                     </span>

@@ -148,14 +148,7 @@ export function App() {
               {/* Washi Tape at Top of Landing Card */}
               <div className="washi-tape absolute -top-3.5 left-1/2 -translate-x-1/2 w-32 h-6 rotate-[-1.5deg] z-20 shadow-sm" />
 
-              {/* Eyebrow / Model Identifier */}
-              <div className="inline-flex items-center gap-2 mb-2">
-                <span className="font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest text-amber-900/80 bg-amber-100/80 px-2.5 py-0.5 rounded border border-amber-900/15">
-                  SPEC // ORIGAMI ARTIFACT
-                </span>
-              </div>
-
-              <h1 className="font-hand text-4xl sm:text-5xl font-bold text-[var(--color-paper-text)] tracking-tight mb-0.5">
+              <h1 className="font-hand text-4xl sm:text-5xl font-bold text-[var(--color-paper-text)] tracking-tight mb-0.5 mt-1">
                 Kashyap Chaudhari
               </h1>
               <p className="font-mono text-[11px] sm:text-xs text-[var(--color-paper-muted)] tracking-wider uppercase mb-3">
